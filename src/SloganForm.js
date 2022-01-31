@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SloganList from './SloganList';
+
 
 export default function SloganForm({ setSlogans, slogans }) {
   // React forms are a pain! 
