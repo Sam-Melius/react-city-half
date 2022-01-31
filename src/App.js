@@ -15,6 +15,7 @@ function App() {
   const [waterfrontId, setWaterfrontId] = useState(1);
   const [castleId, setCastleId] = useState(1);
   // you'll need to track a city name, which starts as the city name of your choice.
+  const [cityName, setCityName] = useState('Paris');
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
 
   return (
@@ -26,10 +27,11 @@ function App() {
         castleId={castleId} />
       <h1>
         {/* dynamically update the city name here using state */}
-        Welcome to beautiful Portland!
+        Welcome to beautiful {cityName}!
       </h1>
       <div className='bottom'>
         {/* here, the CityNameInput component takes in the setCityName state handler function */}
+        <CityNameInput setCityName={setCityName} /> 
         <section className='dropdowns'>
           {/* 
           render all three Dropdown components (WaterfrontDropdown, SkylineDropdown, CastleDropdown) here. 
